@@ -5,7 +5,7 @@
 
 - ## About -
 
-*This was made as a school project for 12th CBSE Boards Exam 2024-25, made by $${\color{red}Animesh}$$*
+*This was made as a school project for 12th CBSE Boards Exam 2024-25, made by* $${\color{red}{Animesh}}$$
 
 - ## Modules used -
 
