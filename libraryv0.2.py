@@ -16,13 +16,13 @@ mydb = mysql.connector.connect(
     port=3306)
 
 mycursor = mydb.cursor()
-print("""
-_________________________________________________________
+# print("""
+# _________________________________________________________
 
-           Welcome To Library Management System
+#            Welcome To Library Management System
 
-_________________________________________________________
-""")
+# _________________________________________________________
+# """)
 
 # Creating Database
 mycursor.execute("CREATE DATABASE IF NOT EXISTS library")
@@ -68,6 +68,12 @@ if flag == 0:
 
 while True:
     print("""
+_________________________________________________________
+
+           Welcome To Library Management System
+
+__________________________________________________________  
+                 
  1.Login
  2.Exit    
     
@@ -119,6 +125,7 @@ _________________________________
 
                     if loop1 == 'y':
                         print("Logging out....")
+                        os.system('clear')
                         break
 
                 # Removing a Book
@@ -126,7 +133,7 @@ _________________________________
                     try:
                         idd = int(input("Enter ID to remove book: "))
 
-                        mycursor.execute("SELECT * FROM available_books WHERE id = %s", (idd,))
+                        mycursor.execute("SELECT * FROM available_books WHERE id = %s", (idd,)) 
                         book = mycursor.fetchone()
 
                         if book:
@@ -177,6 +184,7 @@ _________________________________
                         loop2 = input("Do you want to issue more books? (y/n): ").lower()
 
                     loop1 = input("Do you want to log out? (y/n): ").lower()
+                    os.system('clear')
 
                 # Returning a Book
 
